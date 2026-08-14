@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+</head>
+
+
+
+
+<body>
+
+
+    <nav>
+        <ul>
+            <li>
+            <a href="index.html"><img src="Img/logo.png" width="20" height="20">Biblioteca</a></li>
+            <li><a href="quienes-somos.html">Quines Somos</a></li>
+            <li><a href="tramites.html">Tramites</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+
+    <h2>Consultas</h2>
+
+    <hr>
+
+    <div class="form-consultas">
+
+        <form action="#" method="POST">
+    
+        <!-- Campo para Nombres -->
+        <div>
+            <label for="nombre">Nombres:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ingresa tus nombre">
+        </div>
+    
+        <br>
+
+        <!-- Campo para Gmail (Obligatorio) -->
+        <div>
+            <label for="gmail">Gmail:</label>
+            <!-- El atributo 'required' impide que el formulario se envíe si está vacío -->
+            <input type="email" id="gmail" name="gmail" placeholder="ejemplo@gmail.com" required>
+        </div>
+    
+        <br>
+
+        <!-- Campo para Mensaje -->
+        <div>
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..."></textarea>
+        </div>
+    
+        <br>
+
+        <!-- Botón de envío -->
+        <button type="submit">Enviar Mensaje</button>
+
+        </form>
+
+    </div>
+    
+    <h2>Queres Formar Parte de Nuestro Equipo? </h2>
+
+    <p>Estamos buscando personas con ganas de aportar su conocimiento y crecer profesionalmente, en un equipo de trabajo transparente y colaborativo.
+
+    Valoramos que estén dispuestos a aprender y aceptar nuevos desafíos.
+
+    Estamos convencidos de que el principal activo de la organización son las personas y es por eso que construimos un espacio laboral abierto y participativo.
+
+    Si querés trabajar con nosotros y sumarte al equipo, te invitamos a conocer nuestra oferta laboral y dejarnos tu CV.
+    </p>
+
+    <hr>
+
+    <div class="form-trabajo">
+
+
+        <form action="#" method="POST" enctype="multipart/form-data">
+    
+        <!-- Nombre y Apellido -->
+        <div>
+                <label for="nombre_apellido">Nombre y Apellido:</label>
+                <input type="text" id="nombre_apellido" name="nombre_apellido" required>
+        </div>
+    
+        <br>
+
+        <!-- CUIT/CUIL -->
+        <div>
+                <label for="cuit_cuil">CUIT / CUIL:</label>
+                <!-- Se sugiere un patrón básico para CUIT/CUIL (solo números, sin guiones) o se puede dejar como texto libre -->
+                <input type="text" id="cuit_cuil" name="cuit_cuil" placeholder="Ej: 20123456789" required>
+        </div>
+    
+        <br>
+
+        <!-- Correo Electrónico -->
+        <div>
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+        </div>
+    
+        <br>
+
+        <!-- Estudios (Lista desplegable) -->
+        <div>
+                <label for="estudios">Nivel de Estudios Alcanzado:</label>
+                <select id="estudios" name="estudios" required>
+                    <option value="" disabled selected>Seleccione una opción...</option>
+                    <option value="primario">Primario</option>
+                    <option value="secundario">Secundario</option>
+                    <option value="terciario">Terciario</option>
+                    <option value="universitario">Universitario</option>
+                    <option value="postgrado">Postgrado</option>
+                </select>
+        </div>
+    
+        <br>
+
+        <!-- Idiomas -->
+        <div>
+            <label for="idiomas">Idiomas:</label>
+            <input type="text" id="idiomas" name="idiomas" placeholder="Ej: Inglés (Avanzado), Portugués (Básico)">
+        </div>
+    
+        <br>
+
+        <!-- Conocimientos Adicionales -->
+        <div>
+            <label for="conocimientos">Conocimientos Adicionales:</label>
+            <textarea id="conocimientos" name="conocimientos" rows="4" placeholder="Cursos, manejo de software, experiencia previa..."></textarea>
+        </div>
+    
+        <br>
+
+         <!-- Adjuntar Currículum -->
+        <div>
+            <label for="curriculum">Adjuntar Currículum (PDF o Word):</label>
+            <!-- El atributo 'accept' limita los tipos de archivos que el usuario puede seleccionar -->
+            <input type="file" id="curriculum" name="curriculum" accept=".pdf, .doc, .docx" required>
+        </div>
+    
+        <br><br>
+
+        <!-- Botón de envío -->
+        <button type="submit">Enviar Postulación</button>
+
+
+
+        </form>
+
+    </div>
+
+    <footer>
+
+        <p>
+        © 2026 Biblioteca Provincial - Todos los derechos reservados
+        </p>
+        
+    </footer>
+    
+
+
+
+
+    
+</body>
+</html>
