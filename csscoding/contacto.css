@@ -1,0 +1,160 @@
+/* =========================================
+   RESET BÁSICO Y TIPOGRAFÍA
+   ========================================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #fcfbf9;
+    color: #333333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* =========================================
+   BARRA DE NAVEGACIÓN (FLEXBOX)
+   ========================================= */
+nav {
+    background-color: #3b312b;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    list-style: none;
+}
+
+nav a {
+    color: #f4f1ea;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #d35400;
+}
+
+/* =========================================
+   CONTENEDOR PRINCIPAL (FLEXBOX MODIFICADO)
+   ========================================= */
+.contenedor-principal {
+    display: flex;
+    flex-direction: column; /* Apila los elementos uno debajo del otro */
+    align-items: center;    /* Centra las cajas en la pantalla */
+    gap: 50px;              /* Espacio vertical entre cada formulario */
+    max-width: 800px;       /* Ancho máximo ajustado para que no quede muy estirado */
+    margin: 50px auto;
+    padding: 0 20px;
+    flex: 1;
+}
+
+.seccion-formulario {
+    width: 100%;            /* Ocupa el 100% de los 800px del contenedor */
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border-top: 5px solid #d35400;
+}
+
+h2 {
+    color: #3b312b;
+    margin-bottom: 15px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #e0dcd3;
+    margin-bottom: 25px;
+}
+
+p {
+    margin-bottom: 25px;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* =========================================
+   ESTILOS DE FORMULARIO
+   ========================================= */
+.campo-form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #444;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="file"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+    background-color: #fafafa;
+    transition: border-color 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #d35400;
+    background-color: #fff;
+}
+
+button[type="submit"] {
+    background-color: #d35400;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+button[type="submit"]:hover {
+    background-color: #a84300;
+}
+
+button[type="submit"]:active {
+    transform: scale(0.98);
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+footer {
+    background-color: #3b312b;
+    color: #e0dcd3;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+    font-size: 0.9rem;
+}
