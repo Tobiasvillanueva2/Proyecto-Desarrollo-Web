@@ -1,0 +1,208 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333333;
+    line-height: 1.6;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #1a1a1a;
+    flex-wrap: wrap;
+    }
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    margin-left: auto; 
+}
+
+nav a {
+    text-decoration: none;
+    color: #555555;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #8da9b6; 
+}
+
+
+.busca {
+  display: grid;
+  place-content: start center;
+  min-height: calc(100vh - 80px); 
+  padding: 40px 15px;
+}
+
+.contenedor {
+    background: #ffffff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    width: 100%;          
+    max-width: 700px;    
+    border: 1px solid #7ca6d7;
+}
+
+h1 {
+  font-size: 1.5rem;
+  color: #1a1a1a;
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  padding: 12px 16px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.15);
+}
+
+#listaLibros {
+  list-style: none; 
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px; 
+
+}
+
+#listaLibros li {
+  background-color: #ffffff;
+  border: 1px solid #e8e8e8;
+  border-left: 4px solid #8da9b6;
+  border-radius: 6px;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden; 
+}
+
+#listaLibros li:hover {
+  background-color: #f9fbfd;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.encabezado-libro {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.sinopsis-libro {
+  max-height: 0;            
+  opacity: 0;               
+  transition: max-height 0.4s ease, opacity 0.3s ease, margin-top 0.3s ease;
+  color: #666;
+  font-size: 0.88rem;
+  line-height: 1.4;
+}
+
+#listaLibros li.expandida {
+  border-left-color: #2b6cb0;
+  background-color: #f7fafc;
+}
+
+#listaLibros li.expandida .sinopsis-libro {
+  max-height: 300px;        
+  opacity: 1;              
+  margin-top: 10px;         
+  padding-top: 8px;
+  border-top: 1px dashed #e0e0e0;
+}
+
+.botones {
+  display: none;            
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+  gap: 8px;                 
+}
+
+#listaLibros li.expandida .botones {
+  display: flex;      
+  justify-content: center;       
+}
+
+
+.botones button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.botones button:first-child {
+  background-color: #4a90e2;
+  color: white;
+}
+
+.botones button:first-child:hover {
+  background-color: #357abd;
+}
+
+.botones button:last-child {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.botones button:last-child:hover {
+  background-color: #d0d0d0;
+}
+
+.reserva a {
+  color: #d0d0d0;        
+  text-decoration: none; 
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .busca {
+        padding-top: 20px;
+    }
+
+    .contenedor {
+        padding: 18px 15px; /* Menos espacio interno en pantallas pequeñas */
+    }
+
+    h1 {
+        font-size: 1.25rem;
+    }
+
+    /* Hace que los botones de reservar/cancelar ocupen todo el ancho disponible */
+    .botones button {
+        flex: 1;
+        padding: 10px;
+    }
+}
