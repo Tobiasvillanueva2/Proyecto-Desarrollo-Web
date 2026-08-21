@@ -21,7 +21,7 @@ body {
    BARRA DE NAVEGACIÓN (FLEXBOX)
    ========================================= */
 nav {
-    background-color: #3b312b;
+    background-color: #ffffff;
     padding: 15px 0;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
@@ -35,7 +35,7 @@ nav ul {
 }
 
 nav a {
-    color: #f4f1ea;
+    color: #555555;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.1rem;
@@ -46,7 +46,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #d35400;
+    color: #8da9b6;
 }
 
 /* =========================================
@@ -69,7 +69,7 @@ nav a:hover {
     padding: 40px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    border-top: 5px solid #d35400;
+    border-top: 5px solid #8da9b6;
 }
 
 h2 {
@@ -127,7 +127,7 @@ textarea:focus {
 }
 
 button[type="submit"] {
-    background-color: #d35400;
+    background-color:#8da9b6;
     color: white;
     border: none;
     padding: 15px 20px;
@@ -140,7 +140,8 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background-color: #a84300;
+    background-color: #8da9b6;
+    opacity: 0.9;
 }
 
 button[type="submit"]:active {
@@ -151,7 +152,7 @@ button[type="submit"]:active {
    FOOTER
    ========================================= */
 footer {
-    background-color: #3b312b;
+    background-color:#f1f3f5;
     color: #e0dcd3;
     text-align: center;
     padding: 20px;
