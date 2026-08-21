@@ -1,53 +1,47 @@
-/* =========================================
-   RESET BÁSICO Y TIPOGRAFÍA
-   ========================================= */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-color: #fcfbf9;
+    background-color: #ffffff;
     color: #333333;
     line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
 }
 
-/* =========================================
-   BARRA DE NAVEGACIÓN (FLEXBOX)
-   ========================================= */
+
 nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
     background-color: #ffffff;
-    padding: 15px 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-bottom: 1px solid #1a1a1a;
 }
 
 nav ul {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
     list-style: none;
+    gap: 25px;
+    margin-left: auto; 
 }
 
 nav a {
-    color: #555555;
     text-decoration: none;
+    color: #555555;
     font-weight: bold;
-    font-size: 1.1rem;
     display: flex;
     align-items: center;
     gap: 8px;
-    transition: color 0.3s;
+    font-size: 15px;
 }
 
 nav a:hover {
-    color: #8da9b6;
+    color: #8da9b6; 
 }
+
 
 /* =========================================
    CONTENEDOR PRINCIPAL (FLEXBOX MODIFICADO)
