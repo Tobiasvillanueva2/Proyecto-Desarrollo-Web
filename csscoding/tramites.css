@@ -1,0 +1,195 @@
+/* =========================================
+   RESET Y ESTILOS BASE
+   ========================================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #FFFFFF; /* Fondo blanco pedido */
+    color: #333333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* =========================================
+   NAVEGACIÓN Y FOOTER
+   ========================================= */
+nav {
+    background-color: #8da9b6; /* Color azul grisáceo */
+    padding: 15px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    list-style: none;
+}
+
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.1rem;
+}
+
+footer {
+    background-color: #8da9b6;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto; /* Empuja el footer al final de la página */
+}
+
+/* =========================================
+   CONTENEDOR PRINCIPAL
+   ========================================= */
+.contenedor-tramites {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.titulo-principal {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #222;
+    text-align: center;
+}
+
+/* =========================================
+   TARJETAS DE TRÁMITES (FLEXBOX, BORDER, PADDING)
+   ========================================= */
+.tramite-card {
+    display: flex;             /* Activa Flexbox */
+    flex-direction: row;       /* Coloca los elementos uno al lado del otro */
+    gap: 40px;                 /* Espacio entre el título y el contenido */
+    border: 1px solid #8da9b6; /* Borde con tu color específico */
+    border-radius: 12px;       /* Bordes redondeados modernos */
+    padding: 40px;             /* Espacio interno (Padding) amplio */
+    margin-bottom: 30px;       /* Espacio externo entre tarjetas */
+    background-color: #FFFFFF;
+    transition: box-shadow 0.3s ease;
+}
+
+/* Efecto hover sutil al pasar el mouse */
+.tramite-card:hover {
+    box-shadow: 0 10px 25px rgba(141, 169, 182, 0.2);
+}
+
+/* Lado izquierdo (Título) */
+.tramite-titulo {
+    flex: 0 0 35%; /* Ocupa exactamente el 35% del ancho y no crece ni se encoge */
+}
+
+.tramite-titulo h2 {
+    font-size: 1.8rem;
+    color: #222;
+    line-height: 1.2;
+}
+
+/* Lado derecho (Contenido) */
+.tramite-contenido {
+    flex: 1; /* Ocupa todo el espacio restante */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaciado uniforme entre los párrafos */
+}
+
+.tramite-contenido h4 {
+    font-size: 1.2rem;
+    color: #8da9b6;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* =========================================
+   BOTONES Y ENLACES
+   ========================================= */
+.btn-enlace {
+    display: inline-block;
+    background-color: #8da9b6;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 30px; /* Estilo píldora como en la imagen */
+    font-weight: bold;
+    align-self: flex-start; /* Evita que el botón ocupe todo el ancho */
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.btn-enlace:hover {
+    background-color: #6a8896;
+}
+
+.btn-enlace.outline {
+    background-color: transparent;
+    color: #8da9b6;
+    border: 2px solid #8da9b6;
+}
+
+.btn-enlace.outline:hover {
+    background-color: #8da9b6;
+    color: #FFFFFF;
+}
+
+.enlaces-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.enlace-simple {
+    color: #8da9b6;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.enlace-simple:hover {
+    text-decoration: underline;
+}
+
+/* =========================================
+   LISTAS Y TEXTOS DESTACADOS
+   ========================================= */
+.lista-requisitos {
+    padding-left: 20px;
+    color: #555;
+}
+
+.lista-requisitos li {
+    margin-bottom: 8px;
+}
+
+.nota-destacada {
+    background-color: rgba(141, 169, 182, 0.1);
+    padding: 15px;
+    border-left: 4px solid #8da9b6;
+    border-radius: 0 8px 8px 0;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN (Para celulares)
+   ========================================= */
+@media (max-width: 768px) {
+    .tramite-card {
+        flex-direction: column; /* Apila el título arriba y el contenido abajo en pantallas pequeñas */
+        padding: 25px;
+        gap: 20px;
+    }
+
+    .tramite-titulo {
+        flex: auto;
+    }
+}
