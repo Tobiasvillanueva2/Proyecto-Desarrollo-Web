@@ -62,20 +62,23 @@ nav .logo img {
 
 
 .busca {
-  display: grid;
-  place-content: start center;
+  display: flex;
+  justify-content: center; 
+  align-items: flex-start;
   min-height: calc(100vh - 80px); 
   padding: 40px 15px;
-}
+  width: 100%;     
 
+}
 .contenedor {
-    background: #ffffff;
-    padding: 25px 30px;
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-    width: 100%;          
-    max-width: 700px;    
-    border: 1px solid #7ca6d7;
+  background: #ffffff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  width: 100%;            
+  max-width: 700px;        
+  border: 1px solid #7ca6d7;
+  box-sizing: border-box;  
 }
 
 h1 {
