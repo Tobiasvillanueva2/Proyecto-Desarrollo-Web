@@ -3,10 +3,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
+    font-family: "Elms Sans", sans-serif;
     background-color: #ffffff;
     color: #333333;
     line-height: 1.6;

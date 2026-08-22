@@ -42,21 +42,50 @@ nav, footer {
     color: var(--color-fondo);
 }
 
-nav { padding: 15px 0; }
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #1a1a1a;
+}
+
 nav ul {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
     list-style: none;
+    gap: 25px;
+    margin-left: auto; 
 }
-nav a {
-    color: var(--color-fondo);
+
+nav .logo {
     text-decoration: none;
+    color: #333333;
     font-weight: bold;
     display: flex;
     align-items: center;
     gap: 8px;
+    font-size: 16px;
+    size: 25px;
+}
+
+nav .logo img {
+    width: 50px;
+    height: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #555555;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #8da9b6; 
 }
 footer {
     text-align: center;

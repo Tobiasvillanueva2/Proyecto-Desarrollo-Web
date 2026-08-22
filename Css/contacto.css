@@ -2,10 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
+    font-family: "Elms Sans", sans-serif;
     background-color: #ffffff;
     color: #333333;
     line-height: 1.6;
@@ -42,6 +42,21 @@ nav a:hover {
     color: #8da9b6; 
 }
 
+nav .logo {
+    text-decoration: none;
+    color: #333333;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    size: 25px;
+}
+
+nav .logo img {
+    width: 50px;
+    height: 30px;
+}
 
 /* =========================================
    CONTENEDOR PRINCIPAL (FLEXBOX MODIFICADO)
