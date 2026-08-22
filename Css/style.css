@@ -1,3 +1,75 @@
+/* Contenedor general */
+.scrolling-block {
+  width: 58%;
+  overflow: hidden; 
+  background-color: #FFFFFF;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 12px;
+}
+
+.scrolling-block__row {
+  display: flex;
+  width: 100%;
+}
+
+/* Contenedor animado */
+.scrolling-block__container {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+}
+
+/* Animaciones direccionales */
+.data-left {
+  animation: scroll-left 25s linear infinite;
+}
+
+.data-right {
+  animation: scroll-right 25s linear infinite;
+}
+
+/* Pausa al pasar el cursor (opcional pero interactivo) */
+.scrolling-block__container:hover {
+  animation-play-state: paused;
+}
+
+/* Tarjeta y formato de portada de libro */
+.book-card {
+  width: 180px;
+  height: 270px; /* Proporción clásica 2:3 de portadas */
+  flex-shrink: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.book-card:hover {
+  transform: scale(1.05);
+}
+
+.book-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Keyframes de desplazamiento continuo */
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes scroll-right {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+
+
 /* =========================================
    VARIABLES Y RESET
    ========================================= */
