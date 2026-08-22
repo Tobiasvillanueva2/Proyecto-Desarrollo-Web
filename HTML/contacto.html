@@ -4,117 +4,152 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto - Biblioteca Provincial</title>
-    <!-- Aquí llamamos a tu hoja de estilos externa -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Enlace a tu hoja de estilos -->
     <link rel="stylesheet" href="../Css/contacto.css">
 </head>
 <body>
 
     <nav>
-    <a href="index.html" class="logo"><img src="../Img/logo.png" width="20" height="20" alt="Logo"></a>
-    <ul>
-      <li><a href="buscador.html">Catalogo</a></li>
-      <li><a href="tramites.html">Tramites</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-    </ul>
-  </nav>
+        <a href="index.html" class="logo"><img src="../Img/logo.png" width="24" height="24" alt="Logo"> Biblioteca</a>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="buscador.html">Catálogo</a></li>
+            <li><a href="tramites.html">Trámites</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- NUEVO: Cabecera visual para dar contexto -->
+    <header class="hero-contacto">
+        <div class="hero-texto">
+            <h1>Estamos para escucharte</h1>
+            <p>Escribinos para resolver tus dudas o envianos tu currículum si querés formar parte del equipo de la Biblioteca Provincial.</p>
+        </div>
+    </header>
 
     <main class="contenedor-principal">
 
-        <!-- LADO IZQUIERDO: Consultas -->
-        <section class="seccion-formulario">
-            <h2>Consultas</h2>
-            <hr>
-            
-            <div class="form-consultas">
-                <form action="#" method="POST" id="form-consultas">
-                    <div class="campo-form">
-                        <label for="nombre">Nombres:</label>
-                        <input type="text" id="nombre" name="nombre" placeholder="Ingresá tus nombres">
-                    </div>
-            
-                    <div class="campo-form">
-                        <label for="gmail">Correo Electrónico:</label>
-                        <input type="email" id="gmail" name="gmail" placeholder="ejemplo@gmail.com" required>
-                    </div>
-            
-                    <div class="campo-form">
-                        <label for="mensaje">Mensaje:</label>
-                        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribí tu mensaje aquí..."></textarea>
-                    </div>
-            
-                    <button type="submit" id="btn-submit">Enviar Mensaje</button>
-                </form>
+        <!-- NUEVO: Sección interactiva de canales de atención -->
+        <section class="canales-atencion">
+            <div class="canal-card">
+                <i class="fa-solid fa-envelope icono-canal"></i>
+                <h3>Consultas Generales</h3>
+                <p>Respondemos tus correos en menos de 24 horas hábiles.</p>
+            </div>
+            <div class="canal-card">
+                <i class="fa-solid fa-briefcase icono-canal"></i>
+                <h3>Recursos Humanos</h3>
+                <p>Buscamos talento y pasión por la cultura constantemente.</p>
+            </div>
+            <div class="canal-card">
+                <i class="fa-solid fa-location-dot icono-canal"></i>
+                <h3>Atención Presencial</h3>
+                <p>Lunes a Sábados en Av. Sarmiento 256, Salta Capital.</p>
             </div>
         </section>
 
-        <!-- LADO DERECHO: Trabajo -->
-        <section class="seccion-formulario">
-            <h2>¿Querés formar parte de nuestro equipo?</h2>
-            <p>
-                Estamos buscando personas con ganas de aportar su conocimiento y crecer profesionalmente, en un equipo de trabajo transparente y colaborativo. 
-                Valoramos que estén dispuestos a aprender y aceptar nuevos desafíos. <br><br>
-                Si querés trabajar con nosotros y sumarte al equipo, te invitamos a dejarnos tu CV.
-            </p>
-            <hr>
+        <!-- Contenedor Flex para los formularios -->
+        <div class="formularios-wrapper">
             
-            <div class="form-trabajo">
-                <form action="#" method="POST" enctype="multipart/form-data">
-                    <div class="campo-form">
-                        <label for="nombre_apellido">Nombre y Apellido:</label>
-                        <input type="text" id="nombre_apellido" name="nombre_apellido" required>
-                    </div>
-            
-                    <div class="campo-form">
-                        <label for="cuit_cuil">CUIT / CUIL:</label>
-                        <input type="text" id="cuit_cuil" name="cuit_cuil" placeholder="Ej: 20123456789" required>
-                    </div>
-            
-                    <div class="campo-form">
-                        <label for="correo">Correo Electrónico:</label>
-                        <input type="email" id="correo" name="correo" required>
-                    </div>
-            
-                    <div class="campo-form">
-                        <label for="estudios">Nivel de Estudios Alcanzado:</label>
-                        <select id="estudios" name="estudios" required>
-                            <option value="" disabled selected>Seleccione una opción...</option>
-                            <option value="primario">Primario</option>
-                            <option value="secundario">Secundario</option>
-                            <option value="terciario">Terciario</option>
-                            <option value="universitario">Universitario</option>
-                            <option value="postgrado">Postgrado</option>
-                        </select>
-                    </div>
-            
-                    <div class="campo-form">
-                        <label for="idiomas">Idiomas:</label>
-                        <input type="text" id="idiomas" name="idiomas" placeholder="Ej: Inglés (Avanzado)">
-                    </div>
-            
-                    <div class="campo-form">
-                        <label for="conocimientos">Conocimientos Adicionales:</label>
-                        <textarea id="conocimientos" name="conocimientos" rows="3" placeholder="Cursos, manejo de software..."></textarea>
-                    </div>
-            
-                    <div class="campo-form">
-                        <label for="curriculum">Adjuntar Currículum (PDF o Word):</label>
-                        <input type="file" id="curriculum" name="curriculum" accept=".pdf, .doc, .docx" required>
-                    </div>
-            
-                    <button type="submit">Enviar Postulación</button>
-                </form>
-            </div>
-        </section>
+            <!-- LADO IZQUIERDO: Consultas -->
+            <section class="seccion-formulario">
+                <div class="formulario-cabecera">
+                    <h2>Envianos tu consulta</h2>
+                    <p>Completá los datos y te responderemos a la brevedad.</p>
+                </div>
+                
+                <div class="form-consultas">
+                    <form action="#" method="POST" id="form-consultas">
+                        <div class="campo-form">
+                            <label for="nombre">Nombres:</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Ingresá tus nombres" required>
+                        </div>
+                
+                        <div class="campo-form">
+                            <label for="gmail">Correo Electrónico:</label>
+                            <input type="email" id="gmail" name="gmail" placeholder="ejemplo@gmail.com" required>
+                        </div>
+                
+                        <div class="campo-form">
+                            <label for="mensaje">Mensaje:</label>
+                            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribí tu mensaje aquí..." required></textarea>
+                        </div>
+                
+                        <!-- Botón sólido con hover -->
+                        <button type="submit" id="btn-submit" class="btn-solido">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- LADO DERECHO: Trabajo -->
+            <section class="seccion-formulario destacado">
+                <div class="formulario-cabecera">
+                    <h2>¿Querés formar parte del equipo?</h2>
+                    <p>Buscamos personas con ganas de aportar su conocimiento. Dejanos tu CV.</p>
+                </div>
+                
+                <div class="form-trabajo">
+                    <form action="#" method="POST" enctype="multipart/form-data">
+                        <div class="campo-form">
+                            <label for="nombre_apellido">Nombre y Apellido:</label>
+                            <input type="text" id="nombre_apellido" name="nombre_apellido" required>
+                        </div>
+                
+                        <div class="campo-form row-doble">
+                            <div class="mitad">
+                                <label for="cuit_cuil">CUIT / CUIL:</label>
+                                <input type="text" id="cuit_cuil" name="cuit_cuil" placeholder="Ej: 20123456789" required>
+                            </div>
+                            <div class="mitad">
+                                <label for="correo">Correo Electrónico:</label>
+                                <input type="email" id="correo" name="correo" required>
+                            </div>
+                        </div>
+                
+                        <div class="campo-form">
+                            <label for="estudios">Nivel de Estudios Alcanzado:</label>
+                            <select id="estudios" name="estudios" required>
+                                <option value="" disabled selected>Seleccione una opción...</option>
+                                <option value="primario">Primario</option>
+                                <option value="secundario">Secundario</option>
+                                <option value="terciario">Terciario</option>
+                                <option value="universitario">Universitario</option>
+                                <option value="postgrado">Postgrado</option>
+                            </select>
+                        </div>
+                
+                        <div class="campo-form">
+                            <label for="idiomas">Idiomas:</label>
+                            <input type="text" id="idiomas" name="idiomas" placeholder="Ej: Inglés (Avanzado)">
+                        </div>
+                
+                        <div class="campo-form">
+                            <label for="conocimientos">Conocimientos Adicionales:</label>
+                            <textarea id="conocimientos" name="conocimientos" rows="3" placeholder="Cursos, manejo de software..."></textarea>
+                        </div>
+                
+                        <div class="campo-form archivo-upload">
+                            <label for="curriculum">Adjuntar Currículum (PDF o Word):</label>
+                            <input type="file" id="curriculum" name="curriculum" accept=".pdf, .doc, .docx" required>
+                        </div>
+                
+                        <!-- Botón sólido con hover -->
+                        <button type="submit" class="btn-solido">Enviar Postulación</button>
+                    </form>
+                </div>
+            </section>
+        </div>
 
     </main>
 
-
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
     <script src="../Js/contacto.js"></script>
+    
     <footer>
         <p>© 2026 Biblioteca Provincial - Todos los derechos reservados</p>
     </footer>

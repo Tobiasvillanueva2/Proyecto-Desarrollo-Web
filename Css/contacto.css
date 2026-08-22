@@ -1,170 +1,295 @@
+/* =========================================
+   VARIABLES Y RESET
+   ========================================= */
+:root {
+    --color-principal: #8da9b6;
+    --color-principal-oscuro: #6f8c99;
+    --color-fondo: #FFFFFF;
+    --color-fondo-secundario: #f8fabb; /* Un tono muy leve para contrastar el blanco */
+    --color-texto: #333333;
+    --color-texto-suave: #666666;
+    --sombra-suave: 0 8px 24px rgba(141, 169, 182, 0.15);
+    --sombra-fuerte: 0 12px 32px rgba(141, 169, 182, 0.3);
+}
+
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
-    font-family: "Elms Sans", sans-serif;
-    background-color: #ffffff;
-    color: #333333;
+    font-family: 'Elms Sans', sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
+/* =========================================
+   NAVEGACIÓN Y FOOTER
+   ========================================= */
+nav, footer {
+    background-color: var(--color-principal);
+    color: var(--color-fondo);
+}
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 5%;
-    background-color: #ffffff;
-    border-bottom: 1px solid #1a1a1a;
+    padding: 15px 50px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-fondo);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 nav ul {
     display: flex;
+    gap: 30px;
     list-style: none;
-    gap: 25px;
-    margin-left: auto; 
 }
 
 nav a {
+    color: var(--color-fondo);
     text-decoration: none;
-    color: #555555;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 15px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: opacity 0.3s;
 }
 
-nav a:hover {
-    color: #8da9b6; 
-}
+nav a:hover { opacity: 0.8; }
 
-nav .logo {
-    text-decoration: none;
-    color: #333333;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 16px;
-    size: 25px;
-}
-
-nav .logo img {
-    width: 50px;
-    height: 30px;
+footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: auto;
 }
 
 /* =========================================
-   CONTENEDOR PRINCIPAL (FLEXBOX MODIFICADO)
+   HERO CONTACTO (Cabecera visual)
    ========================================= */
-.contenedor-principal {
-    display: flex;
-    flex-direction: column; /* Apila los elementos uno debajo del otro */
-    align-items: center;    /* Centra las cajas en la pantalla */
-    gap: 50px;              /* Espacio vertical entre cada formulario */
-    max-width: 800px;       /* Ancho máximo ajustado para que no quede muy estirado */
-    margin: 50px auto;
-    padding: 0 20px;
-    flex: 1;
+.hero-contacto {
+    background: linear-gradient(135deg, rgba(141, 169, 182, 0.1), rgba(141, 169, 182, 0.3));
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(141, 169, 182, 0.2);
 }
 
-.seccion-formulario {
-    width: 100%;            /* Ocupa el 100% de los 800px del contenedor */
-    background-color: #ffffff;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    border-top: 5px solid #8da9b6;
+.hero-texto {
+    max-width: 700px;
+    margin: 0 auto;
 }
 
-h2 {
-    color: #3b312b;
+.hero-texto h1 {
+    font-size: 3rem;
+    color: var(--color-principal-oscuro);
     margin-bottom: 15px;
 }
 
-hr {
-    border: 0;
-    height: 1px;
-    background-color: #e0dcd3;
-    margin-bottom: 25px;
-}
-
-p {
-    margin-bottom: 25px;
-    color: #555;
-    font-size: 0.95rem;
+.hero-texto p {
+    font-size: 1.2rem;
+    color: var(--color-texto-suave);
 }
 
 /* =========================================
-   ESTILOS DE FORMULARIO
+   CONTENEDOR PRINCIPAL
+   ========================================= */
+.contenedor-principal {
+    max-width: 1200px;
+    margin: -40px auto 60px auto; /* Sube un poco para superponerse al Hero */
+    padding: 0 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+/* =========================================
+   CANALES DE ATENCIÓN (Tarjetas Info)
+   ========================================= */
+.canales-atencion {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.canal-card {
+    flex: 1 1 calc(33.333% - 20px);
+    background-color: var(--color-fondo);
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: var(--sombra-suave);
+    text-align: center;
+    border-top: 4px solid var(--color-principal);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.canal-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-fuerte);
+}
+
+.icono-canal {
+    font-size: 2.5rem;
+    color: var(--color-principal);
+    margin-bottom: 15px;
+}
+
+/* =========================================
+   ENVOLTORIO DE FORMULARIOS (Flex avanzado)
+   ========================================= */
+.formularios-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start; /* Evita que se estiren de forma desproporcionada */
+}
+
+.seccion-formulario {
+    flex: 1 1 calc(50% - 40px); /* Mitad de la pantalla menos el espacio (gap) */
+    background-color: var(--color-fondo);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: var(--sombra-suave);
+    border: 1px solid rgba(141, 169, 182, 0.2);
+}
+
+/* Tarjeta destacada para RRHH */
+.seccion-formulario.destacado {
+    background-color: rgba(141, 169, 182, 0.03);
+    border: 1px solid var(--color-principal);
+}
+
+.formulario-cabecera {
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(141, 169, 182, 0.3);
+}
+
+.formulario-cabecera h2 {
+    font-size: 1.8rem;
+    color: var(--color-principal-oscuro);
+    margin-bottom: 5px;
+}
+
+/* =========================================
+   ESTILOS DE INPUTS Y CAMPOS
    ========================================= */
 .campo-form {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+}
+
+/* Fila doble para inputs que pueden ir juntos (Flexbox) */
+.row-doble {
+    display: flex;
+    gap: 20px;
+}
+
+.mitad {
+    flex: 1;
 }
 
 label {
     display: block;
     font-weight: bold;
     margin-bottom: 8px;
-    color: #444;
+    color: var(--color-texto);
+    font-size: 0.95rem;
 }
 
 input[type="text"],
 input[type="email"],
-input[type="file"],
 select,
 textarea {
     width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 14px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
     font-family: inherit;
+    font-size: 1rem;
     background-color: #fafafa;
-    transition: border-color 0.3s;
+    transition: all 0.3s ease;
 }
 
 input:focus,
 select:focus,
 textarea:focus {
     outline: none;
-    border-color: #d35400;
-    background-color: #fff;
+    border-color: var(--color-principal);
+    background-color: var(--color-fondo);
+    box-shadow: 0 0 0 4px rgba(141, 169, 182, 0.15);
 }
 
-button[type="submit"] {
-    background-color:#8da9b6;
-    color: white;
-    border: none;
-    padding: 15px 20px;
-    width: 100%;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 4px;
+/* Diseño especial para el input de archivo */
+.archivo-upload input[type="file"] {
+    padding: 10px;
+    background-color: #ffffff;
+    border: 2px dashed var(--color-principal);
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.1s;
-}
-
-button[type="submit"]:hover {
-    background-color: #8da9b6;
-    opacity: 0.9;
-}
-
-button[type="submit"]:active {
-    transform: scale(0.98);
 }
 
 /* =========================================
-   FOOTER
+   BOTONES SÓLIDOS CON HOVER (Requisito)
    ========================================= */
-footer {
-    background-color:#f1f3f5;
-    color: #e0dcd3;
-    text-align: center;
-    padding: 20px;
-    margin-top: auto;
-    font-size: 0.9rem;
+.btn-solido {
+    display: inline-block;
+    width: 100%;
+    background-color: var(--color-principal);
+    color: var(--color-fondo);
+    padding: 16px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(141, 169, 182, 0.4); /* Sensación de relleno/volumen */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.btn-solido:hover {
+    background-color: var(--color-principal-oscuro);
+    transform: translateY(-3px); /* Efecto de levantamiento */
+    box-shadow: 0 8px 20px rgba(141, 169, 182, 0.6);
+}
+
+.btn-solido:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(141, 169, 182, 0.4);
+}
+
+/* =========================================
+   RESPONSIVIDAD
+   ========================================= */
+@media (max-width: 900px) {
+    .formularios-wrapper {
+        flex-direction: column;
+    }
+    
+    .seccion-formulario {
+        flex: 1 1 100%;
+    }
+    
+    .canal-card {
+        flex: 1 1 100%;
+    }
+    
+    .row-doble {
+        flex-direction: column;
+        gap: 0;
+    }
 }
