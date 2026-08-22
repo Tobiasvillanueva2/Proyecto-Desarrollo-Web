@@ -4,111 +4,140 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trámites - Biblioteca Provincial</title>
-    <!-- Enlace a la hoja de estilos externa -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../Css/tramites.css">
 </head>
 <body>
 
     <nav>
         <ul>
-            <li><a href="index.html"><img src="Img/logo.png" width="20" height="20">Biblioteca</a></li>
-            <li><a href="buscador.html">Catalogo</a></li>
-            <li><a href="tramites.html">Tramites</a></li>
+            <li>
+                <a href="index.html">
+                    <img src="Img/logo.png" width="20" height="20" alt="Logo"> Biblioteca
+                </a>
+            </li>
+            <li><a href="tramites.html">Trámites</a></li>
             <li><a href="contacto.html">Contacto</a></li>
         </ul>
-     </nav>
+    </nav>
 
-    <main class="contenedor-tramites">
+    <!-- NUEVO: Hero Section para dar peso visual -->
+    <header class="hero-tramites">
+        <div class="hero-contenido">
+            <h1>Gestión de Trámites</h1>
+            <p>Realiza tus solicitudes, donaciones y asociaciones de forma rápida y sencilla. Todo lo que necesitas saber antes de acercarte a la biblioteca.</p>
+        </div>
+    </header>
+
+    <main class="contenedor-principal">
         
-        <h1 class="titulo-principal">Trámites Disponibles</h1>
-
-        <!-- Trámite 1: Visita Guiada -->
-        <section class="tramite-card">
-            <div class="tramite-titulo">
-                <h2>Solicitud de visita guiada</h2>
+        <!-- NUEVO: Sección de información rápida interactiva -->
+        <section class="info-pasos">
+            <div class="paso-card">
+                <div class="paso-numero">1</div>
+                <h3>Busca tu trámite</h3>
+                <p>Encuentra el formulario o los requisitos necesarios en nuestra lista.</p>
             </div>
-            <div class="tramite-contenido">
-                <h4>Visitas guiadas</h4>
-                <p>
-                    La Biblioteca Provincial recibe delegaciones escolares de Nivel Inicial, Primario, Secundario y Terciario- proponiendo una visita guiada por el organismo y un taller acorde a la edad de los visitantes.
-                </p>
-                <p>
-                    Para solicitarla, debe presentarse el formulario detallando días, horarios, cantidad de asistentes y sugerencia de temas, salas, etc.
-                </p>
-                <a href="ruta_al_formulario.html" class="btn-enlace">Ir al Formulario de Visita Guiada</a>
+            <div class="paso-card">
+                <div class="paso-numero">2</div>
+                <h3>Prepara la documentación</h3>
+                <p>Descarga y completa los modelos requeridos para cada gestión.</p>
+            </div>
+            <div class="paso-card">
+                <div class="paso-numero">3</div>
+                <h3>Presenta tu solicitud</h3>
+                <p>Acércate a Avenida Belgrano 1002 con todo listo para agilizar el proceso.</p>
             </div>
         </section>
 
-        <!-- Trámite 2: Solicitud de sala -->
-        <section class="tramite-card">
-            <div class="tramite-titulo">
-                <h2>Solicitud de sala</h2>
-            </div>
-            <div class="tramite-contenido">
-                <h4>CONDICIONES PARA EL USO DE LAS INSTALACIONES</h4>
-                <div class="enlaces-grupo">
-                    <a href="#" class="enlace-simple">Reglamento CGBA</a>
-                    <a href="#" class="enlace-simple">Formulario de Solicitud de Sala</a>
+        <div class="lista-tramites">
+            <!-- Trámite 1 -->
+            <article class="tramite-card">
+                <div class="tramite-cabecera">
+                    <h2>Solicitud de visita guiada</h2>
+                    <span class="etiqueta">Presencial</span>
                 </div>
-            </div>
-        </section>
+                <div class="tramite-cuerpo">
+                    <h4>Visitas guiadas</h4>
+                    <p>La Biblioteca Provincial recibe delegaciones escolares de Nivel Inicial, Primario, Secundario y Terciario- proponiendo una visita guiada por el organismo y un taller acorde a la edad de los visitantes.</p>
+                    <p>Para solicitarla, debe presentarse el formulario detallando días, horarios, cantidad de asistentes y sugerencia de temas, salas, etc.</p>
+                    <div class="tramite-acciones">
+                        <a href="#" class="btn-solido">Ir al Formulario de Visita</a>
+                    </div>
+                </div>
+            </article>
 
-        <!-- Trámite 3: Donación a la Biblioteca -->
-        <section class="tramite-card">
-            <div class="tramite-titulo">
-                <h2>Donación de libros a la Biblioteca Provincial</h2>
-            </div>
-            <div class="tramite-contenido">
-                <h4>Recepción de Donaciones</h4>
-                <p>
-                    <a href="#" class="btn-enlace outline">FORMULARIO RECEPCION DONACION (Descargar)</a>
-                </p>
-                <p>
-                    La Biblioteca Provincial y el Archivo Histórico reciben donaciones de particulares o instituciones. Según el volumen y especificidad de la donación, se establece un acta acuerdo con condiciones especiales.
-                </p>
-            </div>
-        </section>
+            <!-- Trámite 2 -->
+            <article class="tramite-card">
+                <div class="tramite-cabecera">
+                    <h2>Solicitud de sala</h2>
+                    <span class="etiqueta">Presencial</span>
+                </div>
+                <div class="tramite-cuerpo">
+                    <h4>Instalaciones del complejo</h4>
+                    <p>Revisa las condiciones vigentes para el uso de las instalaciones del complejo de bibliotecas y archivo antes de iniciar tu solicitud.</p>
+                    <div class="tramite-acciones multi-btn">
+                        <a href="#" class="btn-solido secundario">Reglamento CGBA</a>
+                        <a href="#" class="btn-solido">Formulario de Solicitud</a>
+                    </div>
+                </div>
+            </article>
 
-        <!-- Trámite 4: Donaciones a otras Instituciones -->
-        <section class="tramite-card">
-            <div class="tramite-titulo">
-                <h2>Donaciones de la Biblioteca a otras Instituciones</h2>
-            </div>
-            <div class="tramite-contenido">
-                <h4>Pedidos de Donaciones</h4>
-                <p>
-                    La Biblioteca Provincial dona material bibliográfico y otros a instituciones que así lo requieran. Para tramitarla, debe elevarse la nota de pedido a la Dirección de la Biblioteca Provincial.
-                </p>
-                <a href="#" class="enlace-simple">Nota Pedido de Donación <span>(Descargar para impresión)</span></a>
-            </div>
-        </section>
+            <!-- Trámite 3 -->
+            <article class="tramite-card">
+                <div class="tramite-cabecera">
+                    <h2>Donación de libros</h2>
+                    <span class="etiqueta">Presencial</span>
+                </div>
+                <div class="tramite-cuerpo">
+                    <h4>Recepción de Donaciones</h4>
+                    <p>La Biblioteca Provincial y el Archivo Histórico reciben donaciones de particulares o instituciones. Según el volumen y especificidad, se establece un acta acuerdo con condiciones especiales.</p>
+                    <div class="tramite-acciones">
+                        <a href="#" class="btn-solido">Descargar Modelo de Donación</a>
+                    </div>
+                </div>
+            </article>
 
-        <!-- Trámite 5: Requisitos para asociarse -->
-        <section class="tramite-card">
-            <div class="tramite-titulo">
-                <h2>Requisitos para asociarse</h2>
-            </div>
-            <div class="tramite-contenido">
-                <h4>Préstamos Domiciliarios</h4>
-                <p>
-                    La Biblioteca Provincial presta libros a domicilio a través de la <strong>ASOCIACIÓN DE SUS USUARIOS.</strong>
-                </p>
-                
-                <h5 class="subtitulo-requisitos">Condiciones y Requisitos</h5>
-                <ul class="lista-requisitos">
-                    <li>Fotocopia de DNI</li>
-                    <li>Boleta de impuesto o certificado de residencia que acredite el mismo domicilio que figura en el DNI</li>
-                    <li>Pago cuota mensual.</li>
-                </ul>
-                
-                <p class="nota-destacada">
-                    <strong>Personalmente en:</strong> Gestión de Socios, Planta Baja Avenida Belgrano 1002 de 8 a 20h de lunes a viernes, en donde se sacará la foto e imprimirá el carnet.
-                </p>
-                
-                <a href="#" class="btn-enlace">Requisitos Socios (Descargar)</a>
-            </div>
-        </section>
+            <!-- Trámite 4 -->
+            <article class="tramite-card">
+                <div class="tramite-cabecera">
+                    <h2>Donaciones a Instituciones</h2>
+                    <span class="etiqueta">Nota Formal</span>
+                </div>
+                <div class="tramite-cuerpo">
+                    <h4>Pedidos de material</h4>
+                    <p>Damos material bibliográfico a instituciones que lo requieran. Debe elevarse la nota de pedido a la Dirección de la Biblioteca Provincial.</p>
+                    <div class="tramite-acciones">
+                        <a href="#" class="btn-solido">Descargar Carta Modelo</a>
+                    </div>
+                </div>
+            </article>
 
+            <!-- Trámite 5 -->
+            <article class="tramite-card">
+                <div class="tramite-cabecera">
+                    <h2>Requisitos para asociarse</h2>
+                    <span class="etiqueta">Asociación</span>
+                </div>
+                <div class="tramite-cuerpo">
+                    <h4>Préstamos Domiciliarios</h4>
+                    <p>Presta libros a domicilio a través de la ASOCIACIÓN DE SUS USUARIOS.</p>
+                    <ul class="lista-requisitos">
+                        <li>Fotocopia de DNI.</li>
+                        <li>Boleta de impuesto o certificado de residencia (mismo domicilio del DNI).</li>
+                        <li>Pago cuota mensual.</li>
+                    </ul>
+                    <div class="alerta-info">
+                        <strong>Personalmente en:</strong> Gestión de Socios, Planta Baja Av. Belgrano 1002 de 8 a 20h (Lunes a Viernes). Se sacará foto e imprimirá carnet.
+                    </div>
+                    <div class="tramite-acciones">
+                        <a href="#" class="btn-solido">Descargar Requisitos</a>
+                    </div>
+                </div>
+            </article>
+        </div>
     </main>
 
     <footer>
