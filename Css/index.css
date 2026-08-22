@@ -1,6 +1,7 @@
 /* Contenedor general */
-.scrolling-block {
+.galeria {
   width: 58%;
+  height: 670px;
   overflow: hidden; 
   background-color: #FFFFFF;
   padding: 20px 0;
@@ -10,36 +11,32 @@
   border-radius: 12px;
 }
 
-.scrolling-block__row {
+.galeria__mitad {
   display: flex;
   width: 100%;
 }
 
-/* Contenedor animado */
-.scrolling-block__container {
+.galeria__contenedor {
   display: flex;
   gap: 20px;
   width: max-content;
 }
 
-/* Animaciones direccionales */
-.data-left {
+.izq {
   animation: scroll-left 25s linear infinite;
 }
 
-.data-right {
+.der {
   animation: scroll-right 25s linear infinite;
 }
 
-/* Pausa al pasar el cursor (opcional pero interactivo) */
-.scrolling-block__container:hover {
+.galeria__contenedor:hover {
   animation-play-state: paused;
 }
 
-/* Tarjeta y formato de portada de libro */
-.book-card {
+.portada {
   width: 180px;
-  height: 270px; /* Proporción clásica 2:3 de portadas */
+  height: 270px; 
   flex-shrink: 0;
   border-radius: 12px;
   overflow: hidden;
@@ -47,17 +44,16 @@
   transition: transform 0.3s ease;
 }
 
-.book-card:hover {
+.portada:hover {
   transform: scale(1.05);
 }
 
-.book-card img {
+.portada img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/* Keyframes de desplazamiento continuo */
 @keyframes scroll-left {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
@@ -69,10 +65,6 @@
 }
 
 
-
-/* =========================================
-   VARIABLES Y RESET
-   ========================================= */
 :root {
     --color-principal: #8da9b6;
     --color-principal-oscuro: #628393;
@@ -90,7 +82,7 @@
 }
 
 body {
-    font-family: 'Elms Sans', sans-serif; /* Usando la fuente que importaste */
+    font-family: 'Elms Sans', sans-serif; 
     background-color: var(--color-fondo);
     color: var(--color-texto);
     line-height: 1.6;
@@ -99,9 +91,7 @@ body {
     min-height: 100vh;
 }
 
-/* =========================================
-   NAVEGACIÓN Y FOOTER
-   ========================================= */
+
 nav, footer {
     background-color: var(--color-principal);
     color: var(--color-fondo);
@@ -152,10 +142,8 @@ footer {
     margin-top: auto;
 }
 
-/* =========================================
-   HERO SECTION (Flexbox Dividido)
-   ========================================= */
-.hero-principal {
+
+.principal {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -165,44 +153,29 @@ footer {
     min-height: 70vh;
 }
 
-.hero-texto {
+.texto {
     flex: 1 1 50%;
     max-width: 600px;
 }
 
-.hero-texto h1 {
+.texto h1 {
     font-size: 3.5rem;
     line-height: 1.1;
     margin-bottom: 20px;
     color: var(--color-texto);
 }
 
-.hero-texto .resaltado {
+.texto .resaltado {
     color: var(--color-principal);
 }
 
-.hero-texto p {
+.texto p {
     font-size: 1.2rem;
     color: var(--color-texto-suave);
     margin-bottom: 30px;
 }
 
-.hero-imagen {
-    flex: 1 1 50%;
-    display: flex;
-    justify-content: flex-end;
-}
 
-.hero-imagen img {
-    max-width: 100%;
-    border-radius: 20px;
-    box-shadow: var(--sombra-fuerte);
-    object-fit: cover;
-}
-
-/* =========================================
-   CONTENEDOR PRINCIPAL
-   ========================================= */
 .contenedor-principal {
     max-width: 1300px;
     margin: 0 auto;
@@ -210,17 +183,15 @@ footer {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 80px; /* Separación masiva entre secciones para dar "aire" */
+    gap: 80px; 
 }
 
-/* =========================================
-   SECCIÓN DE INFORMACIÓN (Tarjetas + Mapa)
-   ========================================= */
+
 .seccion-info {
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
-    align-items: stretch; /* Iguala las alturas */
+    align-items: stretch; 
 }
 
 .info-contenido {
@@ -235,14 +206,13 @@ footer {
     margin-bottom: 30px;
 }
 
-.tarjetas-container {
+.tarjetas-contenedor {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
 }
 
-.card-info {
-    /* Flex avanzado: 2 columnas, restando el gap */
+.tarjeta-info {
     flex: 1 1 calc(50% - 10px);
     background-color: var(--color-fondo);
     padding: 25px;
@@ -252,7 +222,7 @@ footer {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card-info:hover {
+.tarjeta-info:hover {
     transform: translateY(-5px);
     box-shadow: var(--sombra-fuerte);
 }
@@ -263,7 +233,7 @@ footer {
     margin-bottom: 15px;
 }
 
-.card-info h3 {
+.tarjeta-info h3 {
     font-size: 1.1rem;
     margin-bottom: 10px;
 }
@@ -282,9 +252,6 @@ footer {
     border: none;
 }
 
-/* =========================================
-   SECCIÓN QUIÉNES SOMOS (Bloques en Zigzag)
-   ========================================= */
 .quienes-somos {
     display: flex;
     flex-direction: column;
@@ -321,12 +288,11 @@ footer {
     transition: background-color 0.3s ease;
 }
 
-/* Magia de Flexbox: Invierte la alineación de los bloques pares */
 .quienes-bloques .bloque-valor:nth-child(even) {
     border-left: none;
     border-right: 6px solid var(--color-principal);
     text-align: right;
-    justify-content: flex-end; /* Empuja el contenido a la derecha */
+    justify-content: flex-end; 
 }
 
 .bloque-valor:hover {
@@ -343,10 +309,8 @@ footer {
     margin-bottom: 15px;
 }
 
-/* =========================================
-   BOTONES E INTERACCIONES
-   ========================================= */
-.hero-acciones {
+
+.acciones {
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
@@ -419,9 +383,7 @@ footer {
     box-shadow: 0 5px 15px rgba(141, 169, 182, 0.4);
 }
 
-/* =========================================
-   RESPONSIVIDAD AVANZADA
-   ========================================= */
+
 @media (max-width: 992px) {
     .hero-principal, .seccion-info {
         flex-direction: column;
@@ -440,8 +402,8 @@ footer {
     }
 }
 @media (max-width: 600px) {
-    .card-info {
-        flex: 1 1 100%; /* Una sola columna en celulares */
+    .tarjeta-info {
+        flex: 1 1 100%;
     }
     nav {
         flex-direction: column;
