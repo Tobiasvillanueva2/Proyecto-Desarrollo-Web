@@ -1,63 +1,79 @@
 
+:root {
+    --color-principal: #8da9b6;
+    --color-principal-oscuro: #628393;
+    --color-fondo: #FFFFFF;
+    --color-texto: #333333;
+    --color-texto-suave: #666666;
+    --sombra-suave: 0 8px 24px rgba(141, 169, 182, 0.15);
+    --sombra-fuerte: 0 12px 32px rgba(141, 169, 182, 0.3);
+}
+
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
-    font-family: "Elms Sans", sans-serif; 
-    background-color: #ffffff;
-    color: #333333;
+    font-family: 'Elms Sans', sans-serif; 
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
+
+nav, footer {
+    background-color: var(--color-principal);
+    color: var(--color-fondo);
+}
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 5%;
-    background-color: #ffffff;
-    border-bottom: 1px solid #1a1a1a;
-    flex-wrap: wrap;
-    }
+    padding: 15px 50px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-fondo);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
 
 nav ul {
     display: flex;
+    gap: 30px;
     list-style: none;
-    gap: 25px;
-    margin-left: auto; 
 }
 
 nav a {
+    color: var(--color-fondo);
     text-decoration: none;
-    color: #555555;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 15px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: opacity 0.3s;
 }
 
 nav a:hover {
-    color: #8da9b6; 
+    opacity: 0.8;
 }
 
-nav .logo {
-    text-decoration: none;
-    color: #333333;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 16px;
-    size: 25px;
-}
-
-nav .logo img {
-    width: 50px;
-    height: 30px;
+footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: auto;
 }
 
 
@@ -164,7 +180,8 @@ input:focus {
   margin-top: 12px;
   padding-top: 10px;
   border-top: 1px solid #eee;
-  gap: 8px;                 
+  gap: 8px;              
+  color: #FFFFFF;   
 }
 
 #listaLibros li.expandida .botones {
@@ -174,6 +191,7 @@ input:focus {
 
 
 .botones button {
+  font-family: 'Elms Sans', sans-serif;
   padding: 6px 12px;
   border: none;
   border-radius: 4px;
@@ -183,27 +201,31 @@ input:focus {
 }
 
 .botones button:first-child {
-  background-color: #4a90e2;
-  color: white;
+    background-color: var(--color-principal);
+    color: #FFFFFF;
 }
 
 .botones button:first-child:hover {
-  background-color: #357abd;
+    background-color: var(--color-principal-oscuro);
+    color: #FFFFFF;
 }
 
+/* Botón Secundario (Cancelar) */
 .botones button:last-child {
-  background-color: #e0e0e0;
-  color: #333;
+    background-color: #e8ecef;
+    color: var(--color-texto); 
 }
 
 .botones button:last-child:hover {
-  background-color: #d0d0d0;
+    background-color: #dbe0e5;
+    color: #1a1a1a;
 }
 
+.botones button a,
 .reserva a {
-  color: #d0d0d0;        
-  text-decoration: none; 
-  font-weight: bold;
+    color: inherit; /* Hereda el color definido en el botón contenedor */
+    text-decoration: none;
+    font-weight: bold;
 }
 
 @media (max-width: 768px) {
