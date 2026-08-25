@@ -40,6 +40,13 @@ nav {
     position: sticky;
     top: 0;
     z-index: 100;
+     /* La transición dura 0.4 segundos y afecta el movimiento y la opacidad */
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+ 
+.nav-oculto {
+    transform: translateY(-100%); /* Lo mueve hacia arriba fuera de la pantalla */
+    opacity: 0; /* Lo hace transparente para un efecto más limpio */
 }
 
 .logo {

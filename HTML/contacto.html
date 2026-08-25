@@ -94,7 +94,7 @@
                 </div>
                 
                 <div class="form-trabajo">
-                    <form action="#" method="POST" enctype="multipart/form-data">
+                    <form action="#" method="POST" enctype="multipart/form-data" id="form-trabajo">
                         <div class="campo-form">
                             <label for="nombre_apellido">Nombre y Apellido:</label>
                             <input type="text" id="nombre_apellido" name="nombre_apellido" required>
@@ -132,19 +132,23 @@
                             <label for="conocimientos">Conocimientos Adicionales:</label>
                             <textarea id="conocimientos" name="conocimientos" rows="3" placeholder="Cursos, manejo de software..."></textarea>
                         </div>
-                
+                        <!-- NUEVO: Campo de carga de archivo 
                         <div class="campo-form archivo-upload">
                             <label for="curriculum">Adjuntar Currículum (PDF o Word):</label>
                             <input type="file" id="curriculum" name="curriculum" accept=".pdf, .doc, .docx" required>
                         </div>
-                
-                        <!-- Botón sólido con hover -->
-                        <button type="submit" class="btn-solido">Enviar Postulación</button>
+                        
+                         Botón sólido con hover -->
+                        <button type="submit" class="btn-solido" id="btn-trabajo">Enviar Postulación</button>
                     </form>
                 </div>
             </section>
         </div>
 
+
+        <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+        <script src="../Js/contacto.js"></script>
+    
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
