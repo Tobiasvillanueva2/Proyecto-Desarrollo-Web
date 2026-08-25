@@ -28,7 +28,7 @@ form.addEventListener("submit", function (e) {
 });
 
 
-/* no podemos poner un segundo formulario. causa desconocida
+/* no podemos poner un segundo formulario. causa desconocida 
 
 emailjs.init("_7g1UfUabbNC7uf1i");
 console.log("EmailJS initialized with public key.");
@@ -58,3 +58,4 @@ form2.addEventListener("submit", function (e) {
     });
 });
 */
+/*Averiguar como implementar múltiples formularios con EmailJS, tambien el envio de archivos tipo pdf desde usuario */
