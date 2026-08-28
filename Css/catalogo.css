@@ -1,4 +1,5 @@
 
+
 :root {
     --color-principal: #8da9b6;
     --color-principal-oscuro: #628393;
@@ -233,7 +234,7 @@ input:focus {
     font-weight: bold;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .busca {
         padding-top: 20px;
     }

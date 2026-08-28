@@ -1,4 +1,4 @@
-/* Contenedor general */
+
 .galeria {
   width: 58%;
   height: 670px;
@@ -25,7 +25,6 @@
 .galeria__contenedor:hover {
   animation-play-state: paused;
 }
-
 
 .izq {
   animation: scroll-left 25s linear infinite;
@@ -108,15 +107,13 @@ nav {
     position: sticky;
     top: 0;
     z-index: 100;
-    /* La transición dura 0.4 segundos y afecta el movimiento y la opacidad */
     transition: transform 0.4s ease, opacity 0.4s ease;
 
 }
 
-/* NUEVA CLASE: JavaScript se la pondrá al nav cuando bajes */
 .nav-oculto {
-    transform: translateY(-100%); /* Lo mueve hacia arriba fuera de la pantalla */
-    opacity: 0; /* Lo hace transparente para un efecto más limpio */
+    transform: translateY(-100%);
+    opacity: 0;
 }
 
 .logo {
@@ -152,7 +149,6 @@ footer {
     padding: 30px;
     margin-top: auto;
 }
-
 
 .principal {
     display: flex;

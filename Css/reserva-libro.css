@@ -192,7 +192,7 @@ button:hover {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .contenedor {
         grid-template-columns: 1fr; 
         margin: 20px auto;          
