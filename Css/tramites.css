@@ -97,7 +97,7 @@ footer {
 /* =========================================
    HERO SECTION (Flexbox para centrado absoluto)
    ========================================= */
-.hero-tramites {
+.tramites {
     background: linear-gradient(135deg, var(--color-principal), var(--color-principal-oscuro));
     color: var(--color-fondo);
     padding: 80px 20px;
@@ -112,11 +112,11 @@ footer {
     z-index: 1;
 }
 
-.hero-contenido {
+.-contenido {
     max-width: 600px;
 }
 
-.hero-contenido h1 {
+.-contenido h1 {
     font-size: 3rem;
     margin-bottom: 15px;
 }

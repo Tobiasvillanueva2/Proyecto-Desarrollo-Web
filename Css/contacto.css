@@ -89,25 +89,25 @@ footer {
 /* =========================================
    HERO CONTACTO (Cabecera visual)
    ========================================= */
-.hero-contacto {
+.contacto {
     background: linear-gradient(135deg, rgba(141, 169, 182, 0.1), rgba(141, 169, 182, 0.3));
     padding: 60px 20px;
     text-align: center;
     border-bottom: 1px solid rgba(141, 169, 182, 0.2);
 }
 
-.hero-texto {
+.texto {
     max-width: 700px;
     margin: 0 auto;
 }
 
-.hero-texto h1 {
+.texto h1 {
     font-size: 3rem;
     color: var(--color-principal-oscuro);
     margin-bottom: 15px;
 }
 
-.hero-texto p {
+.texto p {
     font-size: 1.2rem;
     color: var(--color-texto-suave);
 }
@@ -177,7 +177,7 @@ footer {
 }
 
 /* Tarjeta destacada para RRHH */
-.seccion-formulario.destacado {
+.seccion-formulario.rrhh {
     background-color: rgba(141, 169, 182, 0.03);
     border: 1px solid var(--color-principal);
 }
