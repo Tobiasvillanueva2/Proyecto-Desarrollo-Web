@@ -54,17 +54,13 @@ function cargarFraseAleatoria() {
   const fraseTexto = document.querySelector(".frase");
   const fraseAutor = document.querySelector(".frase span");
 
-  // Si no existen los elementos en la pagina actual corta la funcionn
   if (!fraseTexto || !fraseAutor) return;
 
-  // Selecciona un indice al azar dentro del array
   const indiceAleatorio = Math.floor(Math.random() * frases.length);
   const fraseElegida = frases[indiceAleatorio];
 
-  // Reemplaza el texto en el HTML (preservando la etiqueta span del autor)
   fraseTexto.childNodes[0].textContent = `${fraseElegida.texto} `;
   fraseAutor.textContent = fraseElegida.autor;
 }
 
-// se ejecuta cuando toda la pagina se haya cargado
 document.addEventListener("DOMContentLoaded", cargarFraseAleatoria);

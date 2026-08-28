@@ -25,37 +25,33 @@
   <div class="contenedor">
     <h1>BUSCADOR DE LIBROS</h1>
     
-    <!-- Campo de texto para buscar -->
     <input type="text" id="inputBusqueda" placeholder="Escribe el título de un libro...">
     
-    <!-- Lista donde mostraremos los resultados -->
+    <!-- lista para mostrar libros -->
     <ul id="listaLibros"></ul>
   </div>
   </main>
+
 
     <footer>
      <p>© 2026 Biblioteca Provincial - Todos los derechos reservados</p>
     </footer>
 
     <script>
-        let ubicacionAnterior = window.scrollY; // Guarda la posición inicial
+        let ubicacionAnterior = window.scrollY;
         const navbar = document.querySelector('nav');
 
         window.addEventListener('scroll', () => {
             let ubicacionActual = window.scrollY;
 
-            // Si bajamos en la página Y ya pasamos los primeros 50px...
             if (ubicacionAnterior < ubicacionActual && ubicacionActual > 50) {
-                // Le agregamos la clase que lo oculta
                 navbar.classList.add('nav-oculto');
             } 
-            // Si subimos en la página...
             else {
-                // Le quitamos la clase para que vuelva a aparecer
                 navbar.classList.remove('nav-oculto');
             }
 
-            ubicacionAnterior = ubicacionActual; // Actualizamos la posición
+            ubicacionAnterior = ubicacionActual;
         });
     </script>
     <script src="Js\script.js"></script>

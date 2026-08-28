@@ -268,8 +268,6 @@ function mostrarLibros(libros) {
         <button class="reserva"><a href="reserva-libro.html">Reservar</a></button>
         <button>Cancelar</button>
       </div>
-
-      
     `;
 
     li.addEventListener("click", () => {
@@ -283,12 +281,9 @@ function mostrarLibros(libros) {
 inputBusqueda.addEventListener("input", () => {
   const texto = inputBusqueda.value.toLowerCase();
   const resultado = biblioteca.filter(
-    (libro) =>
-      libro.titulo.toLowerCase().includes(texto) ||
-      libro.autor.toLowerCase().includes(texto),
-  );
+    (libro) => libro.titulo.toLowerCase().includes(texto) 
+    ||libro.autor.toLowerCase().includes(texto),);
   mostrarLibros(resultado);
 });
 
-// Cargar al inicio
 mostrarLibros(biblioteca);

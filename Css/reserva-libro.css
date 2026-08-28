@@ -9,6 +9,7 @@
 }
 
 * {
+
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -193,11 +194,11 @@ button:hover {
 
 @media (max-width: 768px) {
     .contenedor {
-        grid-template-columns: 1fr; /* Pasa a 1 columna en celulares */
-        margin: 20px auto;          /* Desactiva el centrado vertical estricto en pantallas chicas */
+        grid-template-columns: 1fr; 
+        margin: 20px auto;          
     }
 
     .tarjeta {
-        padding: 20px;              /* Reduce ligeramente los bordes internos en celular */
+        padding: 20px;           
     }
 }

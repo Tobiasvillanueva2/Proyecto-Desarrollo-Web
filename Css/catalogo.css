@@ -40,13 +40,12 @@ nav {
     position: sticky;
     top: 0;
     z-index: 100;
-     /* La transición dura 0.4 segundos y afecta el movimiento y la opacidad */
     transition: transform 0.4s ease, opacity 0.4s ease;
 }
  
 .nav-oculto {
-    transform: translateY(-100%); /* Lo mueve hacia arriba fuera de la pantalla */
-    opacity: 0; /* Lo hace transparente para un efecto más limpio */
+    transform: translateY(-100%);
+    opacity: 0; 
 }
 
 .logo {
@@ -217,7 +216,6 @@ input:focus {
     color: #FFFFFF;
 }
 
-/* Botón Secundario (Cancelar) */
 .botones button:last-child {
     background-color: #e8ecef;
     color: var(--color-texto); 
@@ -230,7 +228,7 @@ input:focus {
 
 .botones button a,
 .reserva a {
-    color: inherit; /* Hereda el color definido en el botón contenedor */
+    color: inherit; 
     text-decoration: none;
     font-weight: bold;
 }
@@ -241,14 +239,13 @@ input:focus {
     }
 
     .contenedor {
-        padding: 18px 15px; /* Menos espacio interno en pantallas pequeñas */
+        padding: 18px 15px; 
     }
 
     h1 {
         font-size: 1.25rem;
     }
 
-    /* Hace que los botones de reservar/cancelar ocupen todo el ancho disponible */
     .botones button {
         flex: 1;
         padding: 10px;
