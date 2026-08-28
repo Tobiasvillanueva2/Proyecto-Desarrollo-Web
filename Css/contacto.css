@@ -1,11 +1,9 @@
-/* =========================================
-   VARIABLES Y RESET
-   ========================================= */
+
 :root {
     --color-principal: #8da9b6;
     --color-principal-oscuro: #6f8c99;
     --color-fondo: #FFFFFF;
-    --color-fondo-secundario: #f8fabb; /* Un tono muy leve para contrastar el blanco */
+    --color-fondo-secundario: #f8fabb; 
     --color-texto: #333333;
     --color-texto-suave: #666666;
     --sombra-suave: 0 8px 24px rgba(141, 169, 182, 0.15);
@@ -28,9 +26,7 @@ body {
     min-height: 100vh;
 }
 
-/* =========================================
-   NAVEGACIÓN Y FOOTER
-   ========================================= */
+
 nav, footer {
     background-color: var(--color-principal);
     color: var(--color-fondo);
@@ -45,7 +41,6 @@ nav {
     position: sticky;
     top: 0;
     z-index: 100;
-    /* La transición dura 0.4 segundos y afecta el movimiento y la opacidad */
     transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
@@ -60,8 +55,8 @@ nav {
 }
 
 .nav-oculto {
-    transform: translateY(-100%); /* Lo mueve hacia arriba fuera de la pantalla */
-    opacity: 0; /* Lo hace transparente para un efecto más limpio */
+    transform: translateY(-100%); 
+    opacity: 0; 
 }
 
 nav ul {
@@ -86,9 +81,6 @@ footer {
     margin-top: auto;
 }
 
-/* =========================================
-   HERO CONTACTO (Cabecera visual)
-   ========================================= */
 .contacto {
     background: linear-gradient(135deg, rgba(141, 169, 182, 0.1), rgba(141, 169, 182, 0.3));
     padding: 60px 20px;
@@ -112,12 +104,10 @@ footer {
     color: var(--color-texto-suave);
 }
 
-/* =========================================
-   CONTENEDOR PRINCIPAL
-   ========================================= */
+
 .contenedor-principal {
     max-width: 1200px;
-    margin: -40px auto 60px auto; /* Sube un poco para superponerse al Hero */
+    margin: -40px auto 60px auto; 
     padding: 0 20px;
     width: 100%;
     display: flex;
@@ -125,9 +115,7 @@ footer {
     gap: 60px;
 }
 
-/* =========================================
-   CANALES DE ATENCIÓN (Tarjetas Info)
-   ========================================= */
+
 .canales-atencion {
     display: flex;
     flex-wrap: wrap;
@@ -157,18 +145,16 @@ footer {
     margin-bottom: 15px;
 }
 
-/* =========================================
-   ENVOLTORIO DE FORMULARIOS (Flex avanzado)
-   ========================================= */
+
 .formularios-wrapper {
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
-    align-items: flex-start; /* Evita que se estiren de forma desproporcionada */
+    align-items: flex-start; 
 }
 
 .seccion-formulario {
-    flex: 1 1 calc(50% - 40px); /* Mitad de la pantalla menos el espacio (gap) */
+    flex: 1 1 calc(50% - 40px); 
     background-color: var(--color-fondo);
     padding: 40px;
     border-radius: 16px;
@@ -176,7 +162,7 @@ footer {
     border: 1px solid rgba(141, 169, 182, 0.2);
 }
 
-/* Tarjeta destacada para RRHH */
+
 .seccion-formulario.rrhh {
     background-color: rgba(141, 169, 182, 0.03);
     border: 1px solid var(--color-principal);
@@ -194,14 +180,11 @@ footer {
     margin-bottom: 5px;
 }
 
-/* =========================================
-   ESTILOS DE INPUTS Y CAMPOS
-   ========================================= */
 .campo-form {
     margin-bottom: 25px;
 }
 
-/* Fila doble para inputs que pueden ir juntos (Flexbox) */
+
 .row-doble {
     display: flex;
     gap: 20px;
@@ -242,7 +225,7 @@ textarea:focus {
     box-shadow: 0 0 0 4px rgba(141, 169, 182, 0.15);
 }
 
-/* Diseño especial para el input de archivo */
+
 .archivo-upload input[type="file"] {
     padding: 10px;
     background-color: #ffffff;
@@ -250,9 +233,7 @@ textarea:focus {
     cursor: pointer;
 }
 
-/* =========================================
-   BOTONES SÓLIDOS CON HOVER (Requisito)
-   ========================================= */
+
 .btn-solido {
     display: inline-block;
     width: 100%;
@@ -264,13 +245,13 @@ textarea:focus {
     font-size: 1.1rem;
     font-weight: bold;
     cursor: pointer;
-    box-shadow: 0 4px 12px rgba(141, 169, 182, 0.4); /* Sensación de relleno/volumen */
+    box-shadow: 0 4px 12px rgba(141, 169, 182, 0.4); 
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .btn-solido:hover {
     background-color: var(--color-principal-oscuro);
-    transform: translateY(-3px); /* Efecto de levantamiento */
+    transform: translateY(-3px); 
     box-shadow: 0 8px 20px rgba(141, 169, 182, 0.6);
 }
 
@@ -279,9 +260,7 @@ textarea:focus {
     box-shadow: 0 2px 5px rgba(141, 169, 182, 0.4);
 }
 
-/* =========================================
-   RESPONSIVIDAD
-   ========================================= */
+
 @media (max-width: 900px) {
     .formularios-wrapper {
         flex-direction: column;
